@@ -3,12 +3,12 @@ package com.clonBuscador.Buscador.entities;
 import jakarta.persistence.*;
 import lombok.*;
 
+
 @Entity
 @Table(name = "webpage")
-@Getter @Setter
-@ToString
-@EqualsAndHashCode
-@Builder
+@Data
+@NoArgsConstructor
+@AllArgsConstructor
 public class WebPage {
 
     @Id
@@ -21,4 +21,36 @@ public class WebPage {
     private String title;
     @Column(name = "description")
     private String description;
+
+    public Long getId() {
+        return id;
+    }
+
+    public void setId(Long id) {
+        this.id = id;
+    }
+
+    public String getUrl() {
+        return url;
+    }
+
+    public void setUrl(String url) {
+        this.url = url;
+    }
+
+    public String getTitle() {
+        return title;
+    }
+
+    public void setTitle(String title) {
+        this.title = title;
+    }
+
+    public String getDescription() {
+        return description;
+    }
+
+    public void setDescription(String description) {
+        this.description = description;
+    }
 }
