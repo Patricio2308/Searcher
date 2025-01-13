@@ -1,7 +1,7 @@
 package com.clonBuscador.Buscador.controllers;
 
 import com.clonBuscador.Buscador.entities.WebPage;
-import com.clonBuscador.Buscador.services.SearchSevice;
+import com.clonBuscador.Buscador.services.SearchService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -15,7 +15,7 @@ import java.util.Map;
 @RestController
 public class SearchController {
     @Autowired
-    private SearchSevice service;
+    private SearchService service;
 
     @RequestMapping(value = "api/search", method = RequestMethod.GET)
     public List<WebPage> search(@RequestParam Map<String, String> param){

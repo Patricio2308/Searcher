@@ -9,12 +9,11 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Service
-public class SearchSevice {
+public class SearchService {
 
     @Autowired
     private SearchRepository searchRepository;
     public List<WebPage> search(String textSearch){
-
         return searchRepository.search(textSearch);
     }
 }
